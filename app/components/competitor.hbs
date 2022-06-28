@@ -1,0 +1,13 @@
+<div class="card m-1 w-25">
+  <div class="card-body {{bind-attr 'bg-success' @competitor.winner}}">
+    <h3 class="card-title">{{@competitor.title}}</h3>
+    <h5 class="card-title">{{@competitor.name}}</h5>
+        <p class="card-text">
+            {{#if (eq @type this.CHARACTER)}}
+                <span>Mass: {{@competitor.mass}}</span>
+            {{else}}
+                <span>Crew: {{@competitor.crew}}</span>
+            {{/if}}
+        </p>
+  </div>
+</div>

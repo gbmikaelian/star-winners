@@ -1,0 +1,19 @@
+<div class="m-3">
+    <div class="d-flex justify-content-center">
+        <BsButton
+            @defaultText={{"Play"}}
+            class="w-25"
+            @type="outline-dark"
+            @pendingText="..."
+            @onClick={{this.onRefresh}}
+        />
+    </div>
+    <div class="container d-flex mt-4 flex-row flex-wrap justify-content-center">
+        {{#each this.competitorsInfo.competitors as |competitor|}}
+            <Competitor
+                @competitor={{competitor}}
+                @type={{this.competitorsInfo.type}}
+            />
+        {{/each}}
+    </div>
+</div>
